@@ -33,6 +33,13 @@
             </div>
           </li>
           <!-- cats go here -->
+          <li ng-repeat="cat in cats | filter:query | orderBy:orderProp" class="cat">
+            <img ng-src="img/spacecats/{{cat.name}}.jpg"/>
+            <div class="info">
+              <h3>{{cat.name}}</h3>
+              <p>{{cat.bio}}</p>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
